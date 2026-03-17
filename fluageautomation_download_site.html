@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FluageAutomation - Téléchargements</title>
+
+  <style>
+    :root {
+      --bg: #f5f5f5;
+      --white: #ffffff;
+      --text: #333;
+      --text-light: #555;
+      --border: #ddd;
+
+      --header: #2c3e50;
+      --primary: #3498db;
+      --primary-hover: #2980b9;
+      --secondary: #6c757d;
+      --secondary-hover: #5a6268;
+
+      --green-bg: #d4edda;
+      --green-border: #28a745;
+
+      --orange-bg: #fff3cd;
+      --orange-border: #ff9800;
+
+      --red-bg: #f8d7da;
+      --red-border: #dc3545;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    .container {
+      width: min(900px, 92%);
+      margin: auto;
+    }
+
+    header {
+      background: var(--header);
+      color: white;
+      padding: 20px 0;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1 {
+      margin-bottom: 5px;
+    }
+
+    main {
+      background: var(--white);
+      margin-top: 20px;
+      padding: 30px;
+      border: 1px solid var(--border);
+    }
+
+    .section {
+      margin-top: 35px;
+    }
+
+    .info {
+      color: var(--text-light);
+      font-size: 14px;
+    }
+
+    .legend {
+      background: #f8f8f8;
+      border: 1px solid var(--border);
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 14px;
+      border-radius: 6px;
+    }
+
+    .legend-item {
+      display: inline-block;
+      margin: 8px 15px 0 0;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-weight: bold;
+      margin-right: 6px;
+    }
+
+    .green {
+      background: var(--green-bg);
+      border: 1px solid var(--green-border);
+    }
+
+    .orange {
+      background: var(--orange-bg);
+      border: 1px solid var(--orange-border);
+    }
+
+    .red {
+      background: var(--red-bg);
+      border: 1px solid var(--red-border);
+    }
+
+    .notice {
+      background: #cce5ff;
+      border: 1px solid #007bff;
+      padding: 12px 15px;
+      border-radius: 6px;
+      margin: 15px 0 20px;
+      color: #003b75;
+    }
+
+    .card {
+      background: #fafafa;
+      border: 1px solid var(--border);
+      padding: 15px;
+      margin-top: 12px;
+      border-radius: 6px;
+    }
+
+    .card.current {
+      background: var(--green-bg);
+      border-color: var(--green-border);
+    }
+
+    .card.warning {
+      background: var(--orange-bg);
+      border-color: var(--orange-border);
+    }
+
+    .card.bad {
+      background: var(--red-bg);
+      border-color: var(--red-border);
+    }
+
+    .note {
+      font-style: italic;
+    }
+
+    .note.alert {
+      color: #b00020;
+      font-weight: bold;
+    }
+
+    .actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      background: var(--primary);
+      color: white;
+      padding: 8px 15px;
+      border-radius: 6px;
+      transition: 0.2s;
+    }
+
+    .btn:hover {
+      background: var(--primary-hover);
+    }
+
+    .btn-secondary {
+      background: var(--secondary);
+    }
+
+    .btn-secondary:hover {
+      background: var(--secondary-hover);
+    }
+
+    footer {
+      text-align: center;
+      color: #777;
+      padding: 15px 0 30px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container">
+      <h1>FluageAutomation</h1>
+      <p>Centre de téléchargement de FluageAutomation</p>
+    </div>
+  </header>
+
+  <div class="container">
+    <main>
+      <h2>Versions du logiciel</h2>
+      <p class="info">
+        Téléchargez ici les différentes versions de FluageAutomation à installer sur les postes.
+      </p>
+      <p class="info">
+        Le logiciel peut être installé sur une clé USB pour une utilisation portable, ou directement sur le disque dur
+        du poste.
+      </p>
+      <h3>Compatibilité</h3>
+      <div class="notice">
+        Le logiciel est compatible avec les systèmes Windows uniquement.
+        Assurez-vous de choisir la version adaptée à votre poste et de suivre les instructions d'installation fournies.
+      </div>
+
+      <div class="legend">
+        <strong>Légende des versions :</strong><br>
+
+        <div class="legend-item">
+          <span class="tag green">Vert</span>
+          Version recommandée et à utiliser.
+        </div>
+
+        <div class="legend-item">
+          <span class="tag orange">Orange</span>
+          Version ancienne mais encore utilisable avec quelques modifications.
+        </div>
+
+        <div class="legend-item">
+          <span class="tag red">Rouge</span>
+          Version fortement déconseillée.
+        </div>
+      </div>
+
+      <div class="card current">
+        <h3>Version 1.05.001 (actuelle)</h3>
+        <p><strong>Date de dépôt :</strong> 15 mars 2026</p>
+        <p><strong>Description :</strong> version stable avec ajout de protections contre les fausses manipulations.
+          Modification du fichier d'aide interne au logiciel.</p>
+        <p class="note">Note : si le programme de la carte a été corrompu, veuillez télécharger la version appropriée.
+        </p>
+        <div class="actions">
+          <a class="btn" href="https://drive.univ-rouen.fr/f/93254e8420c84131bea4/?dl=1">Télécharger le logiciel</a>
+          <a class="btn btn-secondary" href="https://drive.univ-rouen.fr/f/bcf29314cb6a41dd8b73/?dl=1">Programme à
+            appliquer</a>
+        </div>
+        <p><strong>Modifications du programme :</strong> Changements des chiffres significatifs pour une meilleure
+          précision.</p>
+      </div>
+
+      <div class="card warning">
+        <h3>Version 1.04.001</h3>
+        <p><strong>Date de dépôt :</strong> 10 mars 2026</p>
+        <p><strong>Description :</strong> version stable avec interface améliorée et génération automatique des
+          rapports.</p>
+        <p class="note">Note : si le programme de la carte a été corrompu, veuillez télécharger la version appropriée.
+        </p>
+        <div class="actions">
+          <a class="btn" href="https://drive.univ-rouen.fr/f/3ad000be37224e0bb635/?dl=1">Télécharger le logiciel</a>
+          <a class="btn btn-secondary" href="https://drive.univ-rouen.fr/f/10696dd43bc748eb8464/?dl=1">Programme à
+            appliquer</a>
+        </div>
+        <p><strong>Modifications du programme :</strong> Ajout d'un mode veille (STAND-BY) + Correction du calcul de
+          distance du capteur ultrason suite étalonnage du banc.</p>
+      </div>
+
+      <div class="card bad">
+        <h3>Version 1.03.001</h3>
+        <p><strong>Date de dépôt :</strong> 28 février 2026</p>
+        <p><strong>Description :</strong> version compatible avec les anciens postes.</p>
+        <p class="note alert">Note : nécessite la modification du programme de la carte pour fonctionner
+          correctement.</p>
+        <div class="actions">
+          <a class="btn" href="https://drive.univ-rouen.fr/f/da9048dde6f241f69d25/?dl=1">Télécharger le logiciel</a>
+          <a class="btn btn-secondary" href="https://drive.univ-rouen.fr/f/53c96e57f435465b83f2/?dl=1">Programme à
+            appliquer</a>
+        </div>
+        <p><strong>Modifications du programme :</strong> Aucune correction apportée depuis la version précédente.</p>
+      </div>
+
+      <div class="card bad">
+        <h3>Version 1.02.001</h3>
+        <p><strong>Date de dépôt :</strong> 12 janvier 2026</p>
+        <p><strong>Description :</strong> ancienne version conservée pour archivage.</p>
+        <p class="note alert">Note : nécessite la modification du programme de la carte pour fonctionner
+          correctement.</p>
+        <div class="actions">
+          <a class="btn" href="https://drive.univ-rouen.fr/f/846542d3008b4ca78eb8/?dl=1">Télécharger le logiciel</a>
+          <a class="btn btn-secondary" href="https://drive.univ-rouen.fr/f/53c96e57f435465b83f2/?dl=1">Programme à
+            appliquer</a>
+        </div>
+        <p><strong>Modifications du programme :</strong> Aucune correction apportée depuis la version précédente.</p>
+      </div>
+
+      <div class="card bad">
+        <h3>Version 1.01.001</h3>
+        <p><strong>Date de dépôt :</strong> 5 décembre 2025</p>
+        <p><strong>Description :</strong> première version utilisée pour les tests initiaux.</p>
+        <p class="note alert">Note : nécessite la modification du programme de la carte pour fonctionner
+          correctement.</p>
+        <div class="actions">
+          <a class="btn" href="https://drive.univ-rouen.fr/f/4538faaf5fe9428881df/?dl=1">Télécharger le logiciel</a>
+          <a class="btn btn-secondary" href="https://drive.univ-rouen.fr/f/53c96e57f435465b83f2/?dl=1">Programme à
+            appliquer</a>
+        </div>
+        <p><strong>Modifications du programme :</strong> Programme initial. Permet d'obtenir la déformation de
+          l'éprouvette par Thalès.</p>
+      </div>
+
+      <div class="section">
+        <h2>Pilotes nécessaires</h2>
+        <p class="info">
+          Certains postes doivent installer le pilote avant d'utiliser FluageAutomation
+          (USB / Arduino / convertisseur série).
+        </p>
+
+        <div class="card">
+          <h3>Pilote CH340 (si nécessaire)</h3>
+          <p>Permet la communication avec les cartes Seeeduino Lotus V1.0</p>
+          <div class="actions">
+            <a class="btn" href="https://drive.univ-rouen.fr/f/6530229dba1746c19014/?dl=1">Télécharger</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Pilote CP210 (si nécessaire)</h3>
+          <p>Permet la communication avec les cartes Seeeduino Lotus V1.1</p>
+          <div class="actions">
+            <a class="btn" href="https://drive.univ-rouen.fr/f/04faae0f645042eda74c/?dl=1">Télécharger</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Besoin d'aide ?</h2>
+        <p class="info">
+          Si vous avez des questions ou besoin d'assistance pour l'installation, contactez le support.
+        </p>
+        <div class="actions">
+          <a class="btn" href="mailto:victor.fournierlabe@gmail.com">Contacter le support</a>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      FluageAutomation - Distribution interne du logiciel
+    </footer>
+  </div>
+
+</body>
+
+</html>
