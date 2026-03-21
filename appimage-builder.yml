@@ -3,8 +3,10 @@ version: 1
 script:
   - rm -rf AppDir || true
   - mkdir -p AppDir/usr/bin
+  - mkdir -p AppDir/usr/share/icons/hicolor/256x256/apps
+  - mkdir -p AppDir/usr/share/applications
   - cp -r dist/FluageAutomation/* AppDir/usr/bin/
-  - cp assets/app.png AppDir/app.png
+  - cp assets/app.png AppDir/usr/share/icons/hicolor/256x256/apps/app.png
 
 AppDir:
   path: ./AppDir
@@ -20,7 +22,7 @@ AppDir:
   files:
     include:
       - usr/bin/**
-      - app.png
+      - usr/share/icons/hicolor/256x256/apps/app.png
 
   runtime:
     env:
