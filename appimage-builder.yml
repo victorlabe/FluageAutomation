@@ -4,6 +4,7 @@ script:
   - rm -rf AppDir || true
   - mkdir -p AppDir/usr/bin
   - cp -r dist/FluageAutomation/* AppDir/usr/bin/
+  - cp assets/app.png AppDir/app.png
 
 AppDir:
   path: ./AppDir
@@ -16,12 +17,10 @@ AppDir:
     exec: usr/bin/FluageAutomation
     exec_args: $@
 
-  icons:
-    - assets/app.png
-
   files:
     include:
       - usr/bin/**
+      - app.png
 
   runtime:
     env:
