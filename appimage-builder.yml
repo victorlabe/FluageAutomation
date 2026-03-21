@@ -1,0 +1,31 @@
+version: 1
+
+script:
+  - rm -rf AppDir || true
+  - mkdir -p AppDir/usr/bin
+  - cp -r dist/FluageAutomation/* AppDir/usr/bin/
+
+AppDir:
+  path: ./AppDir
+
+  app_info:
+    id: com.victor.fluageautomation
+    name: FluageAutomation
+    icon: app
+    version: "1.07.001"
+    exec: usr/bin/FluageAutomation
+    exec_args: $@
+
+  icons:
+    - assets/app.png
+
+  files:
+    include:
+      - usr/bin/**
+
+  runtime:
+    env:
+      APPDIR: $APPDIR
+
+AppImage:
+  arch: x86_64
