@@ -1,0 +1,7 @@
+ttkbootstrap
+pyserial
+matplotlib
+openpyxl
+reportlab
+Pillow
+pyinstaller

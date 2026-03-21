@@ -1,0 +1,32 @@
+version: 1
+
+script:
+  - rm -rf AppDir || true
+  - mkdir -p AppDir/usr/bin
+  - mkdir -p AppDir/usr/share/icons/hicolor/256x256/apps
+  - mkdir -p AppDir/usr/share/applications
+  - cp -r dist/FluageAutomation/* AppDir/usr/bin/
+  - cp assets/app.png AppDir/usr/share/icons/hicolor/256x256/apps/app.png
+
+AppDir:
+  path: ./AppDir
+
+  app_info:
+    id: com.victor.fluageautomation
+    name: FluageAutomation
+    icon: app
+    version: "1.06.001"
+    exec: usr/bin/FluageAutomation
+    exec_args: $@
+
+  files:
+    include:
+      - usr/bin/**
+      - usr/share/icons/hicolor/256x256/apps/app.png
+
+  runtime:
+    env:
+      APPDIR: $APPDIR
+
+AppImage:
+  arch: x86_64
